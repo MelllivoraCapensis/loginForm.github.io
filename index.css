@@ -1,0 +1,110 @@
+html, body {
+	height: 100%;
+}
+body {
+    position: relative;
+	margin: 0;
+	padding: 0;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+#container {
+	width: 80%;
+	min-height: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	background: #F1EDE7;
+	border: 1px solid transparent;
+}
+#container p {
+	text-align: justify;
+	text-indent: 30px;
+	font-size: 16px;
+}
+#container h1 {
+	text-align: center;
+}
+#loginForm {
+	position: fixed;
+	top: 50px;
+	left: -305px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	width: 300px;
+	height: 250px;
+	border: 2px solid #BEB7AD;
+	background: url('images/bg-image.jpg');
+	background-size: cover;
+	transition: left 0.5s ease-in;
+}
+#loginForm h2 {
+	text-align: center;
+}
+#loginForm label {
+	display: block;
+}
+#loginForm label:not(:last-of-type) span {
+	display: inline-block;
+	width: 50px;
+	padding: 5px;
+}
+#loginForm label:last-of-type {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+#loginForm input {
+	height: 20px;
+	border: 2px solid #6B461B;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 18px;
+}
+#loginForm input:focus {
+	background: #DFEAE9;
+}
+#enterButton {
+	padding: 10px 30px;
+	margin-top: 20px;
+	background: #6B461B;
+	color: white;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	transition: all .2s;
+    font-weight: bold;
+}
+#enterButton:hover {
+	transform: scale(1.1);
+}
+#navigationButton {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 150px;
+	height: 40px;
+	color: white;
+	font-weight: bold;
+	background: #6B461B;
+	opacity: 0.7;
+	cursor: pointer;
+}
+#navigationButton:hover {
+	opacity: 1;
+}
+#authorizationMessage {
+	display: none;
+}
+@keyframes loginError{
+	15%, 35%, 55%, 75%, 95% {
+		left: -5px;
+	}
+	5%, 25%, 45%, 65%, 85% {
+		left: 5px;
+	}
+	100% {
+		left: 0;
+	}
+}
+.loginError {
+	animation: loginError 0.5s;
+}
